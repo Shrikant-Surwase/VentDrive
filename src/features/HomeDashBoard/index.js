@@ -5,6 +5,12 @@ import AppScreenWrapper from '../../AppScreenWrapper';
 import { CommonActions, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNRestart from 'react-native-restart';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ProfileScreen from '../Profile';
+import HomeScreen from '../HomeScreen';
+import { Home } from 'react-native-feather';
+
+const Tab = createBottomTabNavigator();
 
 const signOut = async (navigation) => {
   try {
@@ -21,7 +27,7 @@ const signOut = async (navigation) => {
     console.log('Error signing out: ', error);
   }
 };
-const DashBoard = () => {
+const HomeDashBoard = () => {
   const navigation = useNavigation();
   return (
     <AppScreenWrapper>
@@ -34,11 +40,12 @@ const DashBoard = () => {
           <Text style={styles.outlineButtonText}>Sign in</Text>
         </Pressable>
       </View>
+      
     </AppScreenWrapper>
   );
 };
 
-export default DashBoard;
+export default HomeDashBoard;
 
 const styles = StyleSheet.create({
   container: {

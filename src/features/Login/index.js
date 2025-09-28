@@ -32,7 +32,7 @@ const Login = () => {
         await AsyncStorage.setItem('isLoggedIn', 'true');
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Dashboard' }],
+          routes: [{ name: 'BottomBarNavigation' }],
         });
       } else {
         Alert.alert('Error', 'Invalid email or password.');
