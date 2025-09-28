@@ -29,7 +29,7 @@ const LandingScreen = () => {
           Rent cars for any occasion
         </Text>
         <Pressable
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate('HomeScreen')}
           style={{
             backgroundColor: '#0E7490',
             padding: 20,
@@ -51,7 +51,7 @@ const LandingScreen = () => {
           </Text>
         </Pressable>
         <Pressable
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate('HomeScreen')}
           style={{
             padding: 20,
             borderRadius: 20,
