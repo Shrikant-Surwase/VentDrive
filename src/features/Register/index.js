@@ -78,7 +78,7 @@ const Register = () => {
 
       navigation.reset({
         index: 0,
-        routes: [{ name: 'Dashboard' }],
+        routes: [{ name: 'BottomBarNavigation' }],
       });
     } catch (error) {
       console.log('AsyncStorage error: ', error);

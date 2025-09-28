@@ -8,11 +8,12 @@ import MapScreen from './features/Map';
 import Login from './features/Login';
 import HomeScreen from './features/HomeScreen';
 import Register from './features/Register';
-import DashBoard from './features/DashBoard';
+import BottomBarNavigation from './features/BottomBarNavigation';
+import HomeDashBoard from './features/HomeDashBoard';
 
 const Stack = createStackNavigator();
 
-function Home() {
+function Root() {
   const [loading, setLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -41,13 +42,14 @@ function Home() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false, 
+        headerShown: false,
       }}
     >
       {isLoggedIn ? (
         <>
-          <Stack.Screen name="Dashboard" component={DashBoard} />
+          <Stack.Screen name="BottomBarNavigation" component={BottomBarNavigation} />
           <Stack.Screen name="Landing" component={LandingScreen} />
+          <Stack.Screen name="HomeDashBoard" component={HomeDashBoard} />
         </>
       ) : (
         <>
@@ -55,7 +57,7 @@ function Home() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen name="Dashboard" component={DashBoard} />
+          <Stack.Screen name="BottomBarNavigation" component={BottomBarNavigation} />
         </>
       )}
       <Stack.Screen name="Map" component={MapScreen} />
@@ -64,4 +66,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Root;

@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import Home from './src/Home';
+import Root from './src/Root';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Home />
+      <Root />
     </NavigationContainer>
   );
 }
