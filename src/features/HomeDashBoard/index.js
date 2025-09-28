@@ -6,7 +6,7 @@ import { CommonActions, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNRestart from 'react-native-restart';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ProfileScreen from '../Profile';
+import ProfileScreen from './ProfileScreen';
 import HomeScreen from '../HomeScreen';
 import { Home } from 'react-native-feather';
 

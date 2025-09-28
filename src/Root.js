@@ -3,7 +3,7 @@ import { ActivityIndicator, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LandingScreen from './LandingScreen';
-import ProfileScreen from './features/Profile';
+import ProfileScreen from './features/HomeDashBoard/ProfileScreen';
 import MapScreen from './features/Map';
 import Login from './features/Login';
 import HomeScreen from './features/HomeScreen';
